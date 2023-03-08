@@ -1,0 +1,55 @@
+class Swapping
+{
+   
+    int a;
+    int b;
+    Swapping ()
+    {
+        a=b=0;
+    }
+    Swapping(int a, int b)
+    {
+        this.a=a;
+        this.b=b;
+    }
+    void swap_Pass_by_Reference(Swapping obj)
+    {
+        int temp=obj.a;
+        obj.a=obj.b;
+        obj.b=temp;
+    }
+}
+
+public class Main {
+    public static void main(String[] args)
+    {
+       /* Box b1=new Box(1,2,3);
+        System.out.print("Data of B1 is: ");
+        b1.printData();
+        Box b2=new Box();
+        System.out.print("Data of B2 is: ");
+        b2.printData();
+        Box b3=new Box(b1);
+        System.out.print("Data of B3 is: ");
+        b3.printData();*/
+       /* Swapping obj=new Swapping();
+        int a=30;
+        int b=50;
+        System.out.println("Before Swapping ");
+        System.out.println("a= "+a+": b= "+b);
+        System.out.println("After Swapping ");
+        obj.swap(a,b);
+        System.out.println("a= "+a+": b= "+b);*/
+        int a=10;
+        int b=20;
+        Swapping obj=new Swapping(a,b);
+
+        System.out.println("Before swapping");
+        System.out.println("a= "+obj.a+": b= "+obj.b);
+        System.out.println("After swapping");
+        obj.swap_Pass_by_Reference(obj);
+        System.out.println("a= "+obj.a+": b= "+obj.b);
+        
+        
+    }
+}
