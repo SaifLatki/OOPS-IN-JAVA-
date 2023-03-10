@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class GreatestDivisor
+{
+    int check(int a,int b)
+    {
+       if(b!=0){
+           return check(b,a%b);
+       }
+       else
+           return a;
+    }
+}
+
+
+
+public class GcdRecursion {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        GreatestDivisor gcd=new GreatestDivisor();
+        System.out.println("Enter the first number");
+        int a=sc.nextInt();
+        System.out.println("Enter the second number");
+        int b=sc.nextInt();
+        System.out.println(a+" and "+b+" The greatest common divisor is= "+gcd.check(a,b));
+    }
+}
