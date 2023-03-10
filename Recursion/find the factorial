@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Recur{
+    static int fac=1;
+    static int mult(int x)
+    {
+        if (x>1)
+        {
+            fac=x*mult(x-1);
+            return fac;
+        }
+        else
+            return x;
+    }
+}
+
+public class Recursion {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Recur r = new Recur();
+        System.out.println("Enter the number: ");
+        int a=sc.nextInt();
+        System.out.println(a+" Factorial is= "+r.mult(a));
+    }
+}
