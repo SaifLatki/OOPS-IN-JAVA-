@@ -49,6 +49,34 @@ class Frog extends Animal{
         System.out.println("Tran,Tran");
     }
 }
+class Kitten extends Animal{
+    
+    Kitten (){
+        name="";
+        age=0;
+        gender="";
+    }
+    Kitten (String name,int age,String gender){
+        super(name,age,gender);
+    }
+    void produceSound(){
+        System.out.println("Meen Aoon");
+    }
+}
+class Tomcats extends Animal{
+    
+    Tomcats(){
+        name="";
+        age=0;
+        gender="";
+    }
+    Tomcats(String name,int age,String gender){
+        super(name,age,gender);
+    }
+    void produceSound(){
+        System.out.println("Mee Aoon");
+    }
+}
 
 public class Task2 {
 }
